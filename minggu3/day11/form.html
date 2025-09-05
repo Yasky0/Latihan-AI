@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Websiet Sekolah</title>
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+        <div class="form_login">
+            <form>
+                <h2 class="welcome">Selamat datang di AI Chatbot sekolah</h2>
+
+                <label>Nama siswa <input type="text" id="nama_siswa"></label><br>
+                <label>Kelas siswa <input type="text" id="kelas_siswa"></label><br>
+                <button type="button" id="button_data">Submit</button>
+            </form>
+            <h4>Biodata</h4>
+            <p id="hasil"></p> 
+        </div>
+        <script>
+            prompt('Masukan nama: ')
+            document.getElementById("button_data").onclick = function(){
+                let nama = document.getElementById("nama_siswa").value;
+                let kelas = document.getElementById("kelas_siswa").value;
+                console.log(`Nama: ${nama}\nKelas: ${kelas}`);
+
+                let output = `nama: ${nama}<br>kelas: ${kelas}`;
+                document.getElementById("hasil").innerHTML = output;
+            }
+        </script>
+    </body>
+</html>
